@@ -1,15 +1,17 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
 
-export type AffairPriorityType = 'high' | 'low' | 'middle'
+// types
+export type AffairPriorityType = 'high' |'middle'| 'low'// need to fix any
 export type AffairType = {
-    _id: number
-    name: string
-    priority: string
-}
+    _id:number
+    name:string
+    priority:string
+} // need to fix any
 export type FilterType = 'all' | AffairPriorityType
 
-const defaultAffairs: (Array<AffairType>) = [ // need to fix any
+// constants
+const defaultAffairs: Array<AffairType> = [ // need to fix any
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -17,15 +19,13 @@ const defaultAffairs: (Array<AffairType>) = [ // need to fix any
     {_id: 5, name: 'html & css', priority: 'middle'},
 ]
 
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => { // need to fix any
-    if (filter === 'all') {
-        return affairs
-    }else{
-        return affairs.filter(elem=>elem.priority===filter)
-    }
+// pure helper functions
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
+    if (filter === 'all') return affairs
+    else return affairs.filter(elem=>elem.priority===filter)
 }
-export const deleteAffair = (affairs: Array<AffairType>, _id: any): any => { // need to fix any
-    return affairs.filter(el => el._id !== _id)
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
+    return affairs.filter(elem=>elem._id!==_id)
 }
 
 function HW2() {
@@ -33,7 +33,7 @@ function HW2() {
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
+    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
 
     return (
         <div>
