@@ -1,3 +1,60 @@
 .someClass {
 
 }
+.container{
+    margin-left: 100px;
+}
+
+
+.high {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.high:hover {
+    background-color: red; /* Green */
+    color: white;
+}
+
+.middle {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.middle:hover {
+    background-color: orange; /* Green */
+    color: white;
+}
+
+.all {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.all:hover {
+    background-color: hotpink; /* Green */
+    color: white;
+}
+
+.remove:hover{
+    background-color: red;
+}
+
+.highColor{
+    color: red;
+}
+.middleColo{
+    color:orange;
+}
+.lowColor{
+    color:green;
+}
+.nameTask{
+    color:dodgerblue;
+}

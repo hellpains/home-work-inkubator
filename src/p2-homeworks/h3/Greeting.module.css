@@ -1,19 +1,21 @@
-.greeting{
+
+.container{
+    margin-left: 100px;
 }
 
 
 
-
-
-
-.someClass {
-
+.inputClass{
+    border: 1px solid red;
 }
 
 .error {
     border: 1px solid red;
     color: red;
 }
+
 .errorMessage {
     color: red;
 }
+
+

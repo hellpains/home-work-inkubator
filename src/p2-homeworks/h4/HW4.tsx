@@ -30,7 +30,8 @@ function HW4() {
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    className={s.superInput}
+                    // spanClassName={s.superInput}
                 />
 
                 <SuperInputText
@@ -39,13 +40,14 @@ function HW4() {
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
+                <SuperButton className={s.default}>
                     default
                 </SuperButton>
 
                 <SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
+                    className={s.default}
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>

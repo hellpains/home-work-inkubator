@@ -1,7 +1,18 @@
-.default {
-
-}
 
 .red {
     background: red;
 }
+
+.default {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.default:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+

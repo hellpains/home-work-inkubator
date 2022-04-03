@@ -1,10 +1,12 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 type GreetingPropsType = {
     name: string // need to fix any
     setNameCallback: (event: ChangeEvent<HTMLInputElement>) => void // need to fix any
-    addUser: ()=>void  // need to fix any
+    addUser: () => void  // need to fix any
     error: string // need to fix any
     setError: (error: string) => void
     totalUsers: number // need to fix any
@@ -22,15 +24,15 @@ const Greeting: React.FC<GreetingPropsType> = (
         }
     }
     return (
-        <div>
-            <input onKeyPress={onKeyPressHandler}
-                   value={name}
-                   onChange={setNameCallback}
-                   className={inputClass}
+        <div className={s.container}>
+            <SuperInputText onKeyPress={onKeyPressHandler}
+                            className={error&& s.error}
+                            value={name}
+                            onChange={setNameCallback}
             />
-            <button onClick={addUser}>add</button>
+            <SuperButton onClick={addUser}>add</SuperButton>
             <span>{totalUsers}</span>
-            {error&&<div className={s.errorMessage}>{error}</div>}
+            {error && <div className={s.errorMessage}>{error}</div>}
         </div>
     )
 }

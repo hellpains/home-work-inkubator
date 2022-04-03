@@ -48,7 +48,7 @@ body{
 
 .item .item__body .time{
     position: absolute;
-    color: black;
+    color: white;
     font-size: 23px;
     bottom: 5px;
     right: 15px;
