@@ -30,7 +30,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                             value={name}
                             onChange={setNameCallback}
             />
-            <SuperButton onClick={addUser}>add</SuperButton>
+            <SuperButton disabled={error?true:false} className={error?s.disabled:s.default} onClick={addUser}>add</SuperButton>
             <span>{totalUsers}</span>
             {error && <div className={s.errorMessage}>{error}</div>}
         </div>

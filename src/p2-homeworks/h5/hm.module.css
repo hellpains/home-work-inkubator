@@ -1,0 +1,25 @@
+.slide {
+    position: relative;
+    left: -180px;
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    height: 30px;
+    margin: 5px 0 0 10px;
+    transition: left 0.29s linear;
+
+}
+
+div:hover {
+    left: 0px;
+}
+.block{
+    background-color: mediumpurple;
+    width: 20px;
+    height: 20px;
+}
+
+.slide a {
+    text-decoration: none;
+    color: dodgerblue;
+}

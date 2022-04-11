@@ -11,7 +11,7 @@ type AffairPropsType = {
 function Affair(props: AffairPropsType) {
     const deleteCallback = () => {props.deleteAffairCallback(props.affair._id)}// need to fix
     const styleAffairs={
-        width:'200px',
+        width:'250px',
         display:'flex',
         justifyContent:'space-between'
     }
@@ -23,7 +23,7 @@ function Affair(props: AffairPropsType) {
            <span className={s.nameTask}>{props.affair.name}</span>
            <span className={`${props.affair.priority==='high'?s.highColor:''} ${props.affair.priority==='middle'?s.middleColo:'' } ${props.affair.priority==='low'?s.lowColor:''}`}>[{props.affair.priority}]</span>
 
-            <SuperButton className={s.remove} onClick={deleteCallback}>x</SuperButton>
+            <SuperButton className={`${s.default} ${s.remove}`} onClick={deleteCallback}>x</SuperButton>
         </div>
     )
 }

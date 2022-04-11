@@ -18,7 +18,7 @@ function HW4() {
 
     const [checked, setChecked] = useState<boolean>(false)
     const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
-
+    const disabled=true
     return (
         <div>
             <hr/>
@@ -44,15 +44,17 @@ function HW4() {
                     default
                 </SuperButton>
 
+
+
                 <SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
-                    className={s.default}
+                    className={disabled?s.disabled:s.default}
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
 
-                <SuperButton disabled>
+                <SuperButton disabled={true} className={disabled?s.disabled:s.default}>
                     disabled
                 </SuperButton>
 
@@ -66,7 +68,7 @@ function HW4() {
                 </SuperCheckbox>
 
                 {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                <SuperCheckbox onChangeChecked={setChecked} checked={checked} onChange={testOnChange}/>
             </div>
 
             <hr/>

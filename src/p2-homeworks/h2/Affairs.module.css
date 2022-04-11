@@ -4,7 +4,24 @@
 .container{
     margin-left: 100px;
 }
+.default {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
 
+.default:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.disabled:hover{
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
 
 .high {
     margin: 5px;
@@ -27,6 +44,10 @@
 
 .middle:hover {
     background-color: orange; /* Green */
+    color: white;
+}
+.low:hover{
+    background-color: green;
     color: white;
 }
 
@@ -58,3 +79,6 @@
 .nameTask{
     color:dodgerblue;
 }
+
+
+
