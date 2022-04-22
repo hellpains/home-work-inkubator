@@ -1,0 +1,35 @@
+.select {
+    width: 100px;
+    padding: 5px;
+    padding-right: 30px;
+
+    cursor: pointer;
+    appearance: none;
+    background-color: lightskyblue;
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50px, 0 0;
+    background-size: .65em auto, 100%;
+
+    border:2px inset mediumpurple;
+    color: mediumpurple;
+    font-size: 17px;
+}
+
+.select:focus {
+    outline: none;
+    border:#99ff99 solid 2px;
+}
+
+.option {
+    color: mediumpurple;
+}
+
+.option:checked{
+    background: lightgrey;
+}
+
+.option:hover{
+    box-shadow: 0 0 10px 100px #fed2df;
+    transition: all .2s ease-in-out;
+    background: red;
+}
