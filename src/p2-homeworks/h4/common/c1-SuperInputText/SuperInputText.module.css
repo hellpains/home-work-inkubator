@@ -12,11 +12,12 @@
 
 .superInput {
     position: relative;
-    font-size: 16px;
-    height: auto;
-    padding: 10px;
+    font-size: 14px;
+    /*height: 8px;*/
+    padding: 5px;
     margin: 5px;
 }
+
 
 .superInput:focus {
     box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2) ;

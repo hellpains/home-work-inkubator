@@ -1,0 +1,31 @@
+.span{
+    display: inline-block;
+
+    height: 30px;
+    padding-top: 10px;
+
+    cursor: pointer;
+    color:mediumpurple;
+}
+.input{
+    width: 500px;
+    height: 10px;
+}
+.button {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.disabled:hover{
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}

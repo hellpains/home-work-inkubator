@@ -1,0 +1,61 @@
+.default {
+    padding: 5px 10px;
+
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.default:hover {
+    background-color: white; /* Green */
+    color: white;
+}
+
+.default:hover{
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.sortUp:hover{
+    background-color: mediumpurple;
+    color: white;
+}
+.sortUp.active{
+    background-color: mediumpurple;
+    color: white;
+}
+.sortDown:hover{
+    background-color: lightskyblue;
+    color: white;
+}
+.sortDown.active{
+    background-color: lightskyblue;
+    color: white;
+}
+.check18:hover{
+    background-color: green;
+    color: white;
+}
+.check18.active{
+    background-color: green;
+    color: white;
+}
+
+.divFlexButton{
+    display:flex;
+    width:250px;
+    justify-content:space-between;
+}
+
+.divFlexMap{
+    display:flex;
+    width:240px;
+    justify-content:space-between;
+}
+
+.divFlexButton .sortUp.active{
+
+}

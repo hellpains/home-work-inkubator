@@ -1,38 +1,35 @@
-import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from 'react'
-import
+.select {
+    width: 100px;
+    padding: 5px;
+    padding-right: 30px;
 
-type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
+    cursor: pointer;
+    appearance: none;
+    background-color: lightskyblue;
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50px, 0 0;
+    background-size: .65em auto, 100%;
 
-type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: any[]
-    onChangeOption?: (option: any) => void
+    border:2px inset mediumpurple;
+    color: mediumpurple;
+    font-size: 17px;
 }
 
-const SuperSelect: React.FC<SuperSelectPropsType> = (
-    {
-        options,
-        onChange, onChangeOption,
-        ...restProps
-    }
-) => {
-    const mappedOptions: any[] = options ? options.map((el, i) => <option key={i} value={el}>{el}</option>) : [] // map options with key
-
-    const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChange && onChange(e)
-        onChangeOption && onChangeOption(e.currentTarget.value)
-    }
-
-    const finalSelectClassName = s.select + (
-        className
-            ? ' ' + className
-            : ''
-    )
-
-    return (
-        <select className={finalSelectClassName} onChange={onChangeCallback} {...restProps}>
-            {mappedOptions}
-        </select>
-    )
+.select:focus {
+    outline: none;
+    border:#99ff99 solid 2px;
 }
 
-export default SuperSelect
+.option {
+    color: mediumpurple;
+}
+
+.option:checked{
+    background: lightgrey;
+}
+
+.option:hover{
+    box-shadow: 0 0 10px 100px #fed2df;
+    transition: all .2s ease-in-out;
+    background: red;
+}
