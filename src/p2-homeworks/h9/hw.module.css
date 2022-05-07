@@ -1,0 +1,35 @@
+.clock{
+    align-items: center;
+    width: 150px;
+    border: 1px solid black;
+    background-color: lightskyblue;
+}
+
+
+
+.startButton,.stopButton {
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.startButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+.stopButton:hover {
+    background-color: red; /* Green */
+    color: white;
+}
+
+
+
+
+
+.startButton:hover{
+    margin: 5px;
+    border: 1px solid gray;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
