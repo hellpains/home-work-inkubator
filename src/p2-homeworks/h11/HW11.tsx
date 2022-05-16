@@ -3,8 +3,11 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
+    const [value, setValue] = React.useState<number[]>([33, 66]);
     const [value1, setValue1] = useState(0)
     const [value2, setValue2] = useState(100)
+
+    const max=value[0]>value[1]
 
     return (
         <div>
@@ -15,16 +18,18 @@ function HW11() {
             <div>
                 <span>{value1}</span>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    setValue1={setValue1}
                 />
             </div>
 
-            <div>
-                <span>{value1}</span>
+            <div style={{display:'flex',width:"270px",justifyContent:"space-between"} }>
+                <span>{value[0]}</span>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    value={value}
+                    max={max}
+                    setValue={setValue}
                 />
-                <span>{value2}</span>
+                <span>{value[1]}</span>
             </div>
 
             <hr/>
