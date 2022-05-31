@@ -2,7 +2,7 @@
     background: dimgrey;
 }
 
-.dark-text {
+.darkText {
     color: aliceblue;
 }
 
@@ -10,7 +10,7 @@
     background: lightcoral;
 }
 
-.red-text {
+.redText {
     color: aqua;
 }
 
@@ -18,6 +18,10 @@
     background: lightgreen;
 }
 
-.some-text {
+.someText {
     color: darkslateblue;
+}
+
+.title{
+    padding: 10px;
 }

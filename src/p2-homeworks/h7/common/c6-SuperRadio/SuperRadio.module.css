@@ -15,9 +15,9 @@
     border: 2px solid mediumpurple;
 }
 
-.radio:checked {
-    background-color: pink;
-}
+/*.radio:checked {*/
+/*    background-color: pink;*/
+/*}*/
 
 .radio:focus {
     border: 2px solid mediumpurple;
